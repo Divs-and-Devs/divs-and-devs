@@ -36,7 +36,7 @@ export default {
     .col-11 { width: calc((100%/(12/11)) - var(--gutter)); }
     .col-12 { width: calc((100%/(12/12)) - var(--gutter)); }
 
-    @include desktop /* Desktop */ {
+    @include desktop {
         .col-1:nth-child(12n+1),
         .col-2:nth-child(6n+1),
         .col-3:nth-child(4n+1),
@@ -46,7 +46,7 @@ export default {
             clear: left;
         }
     }
-    @include tablet /* Tablet */ {
+    @include tablet {
         .col-1t { width: calc((100%/(12/1)) - var(--gutter)); }
         .col-2t { width: calc((100%/(12/2)) - var(--gutter)); }
         .col-3t { width: calc((100%/(12/3)) - var(--gutter)); }
@@ -73,7 +73,7 @@ export default {
             clear: left;
         }
     }
-    @include mobile /* Mobile */ {
+    @include mobile {
         .col-1m { width: calc((100%/(12/1)) - var(--gutter)); }
         .col-2m { width: calc((100%/(12/2)) - var(--gutter)); }
         .col-3m { width: calc((100%/(12/3)) - var(--gutter)); }
@@ -90,7 +90,7 @@ export default {
             display: none;
         }	
     }
-    @media screen and (min-width: 414px) and (max-width: 767px) /* Desktop */ {
+    @media screen and (min-width: 414px) and (max-width: 767px) {
         .col-1m:nth-child(12n+1),
         .col-2m:nth-child(6n+1),
         .col-3m:nth-child(4n+1),
@@ -100,7 +100,7 @@ export default {
             clear: left;
         }
     }
-    @media screen and (max-width: 413px) /* iPhone 6 and smaller */  {
+    @media screen and (max-width: 413px) {
         .col-1s { width: calc((100%/(12/1)) - var(--gutter)); }
         .col-2s { width: calc((100%/(12/2)) - var(--gutter)); }
         .col-3s { width: calc((100%/(12/3)) - var(--gutter)); }
@@ -118,7 +118,7 @@ export default {
         }	
     }
 
-    @media screen and (max-width: 413px) /* Desktop */ {
+    @media screen and (max-width: 413px) {
         .col-1s:nth-child(12n+1),
         .col-2s:nth-child(6n+1),
         .col-3s:nth-child(4n+1),
