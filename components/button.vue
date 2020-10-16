@@ -10,7 +10,7 @@ button {
 
 	border: none;
 	background-color: $accent;
-	color: text-color($accent);
+	color: $accent-text-color;
 	border-radius: $border-radius;
 	
 	padding: 0.5rem 3rem;

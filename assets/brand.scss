@@ -1,15 +1,16 @@
 $background-color: #fff;
 $background-dark: #293133;
 
-$accent: #ff0000;
-$accent-dark: #800000;
-$accent-light: #ff8080;
+$accent: #7e5ded;
+$accent-text-color: white;
+$accent-dark: #553ea1;
+$accent-light:#9474ff;
 
 $accent2: #0000ff;
 $accent2-dark: #000080;
 $accent2-light: #8080ff;
 
-$border-radius: 3px;
+$border-radius: 1rem;
 
 $header-font: 'Raleway';
 $font: 'Lato';
@@ -31,7 +32,9 @@ h6 {
 @function text-color($color) {
   @if (lightness($color) > 50) {
     @return black;
-  } @else {
+  }
+
+  @else {
     @return white;
   }
 }
