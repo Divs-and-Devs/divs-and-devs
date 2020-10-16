@@ -1,0 +1,55 @@
+$background-color: #fff;
+$background-dark: #293133;
+
+$accent: #ff0000;
+$accent-dark: #800000;
+$accent-light: #ff8080;
+
+$accent2: #0000ff;
+$accent2-dark: #000080;
+$accent2-light: #8080ff;
+
+$border-radius: 3px;
+
+$header-font: 'Raleway';
+$font: 'Lato';
+
+* {
+  font-family: $font, sans-serif;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font, sans-serif;
+}
+
+@function text-color($color) {
+  @if (lightness($color) > 50) {
+    @return black;
+  } @else {
+    @return white;
+  }
+}
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
