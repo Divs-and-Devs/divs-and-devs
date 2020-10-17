@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-	  <h1>Divs &amp; Devs</h1>
+	  <h1>Divs <wbr>&amp;<wbr> Devs</h1>
 	  <h2>Coming soon!</h2>
 
 	<div class="email">
@@ -24,14 +24,18 @@ export default class Index extends Vue {
 <style lang="scss" scoped>
 .page {
 	display: flex;
-	height: 100vh;
+	padding: 2rem;
+	box-sizing: border-box;
+	min-height: 100vh;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 
 	h1 {
-		font-size: 25vh;
+		font-size: 25vmin;
 		margin: 1rem;
+		text-align: center;
+		word-break: break-all;
 	}
 
 	input {
@@ -43,8 +47,13 @@ export default class Index extends Vue {
 	}
 
 	.email {
+
+		@include tablet {
+			text-align: center;
+		}
+
 		sub {
-			display: grid;
+			display: block;
 		}
 	}
 }

@@ -29,6 +29,10 @@ h6 {
   font-family: $header-font, sans-serif;
 }
 
+body {
+  margin: 0;
+}
+
 @function text-color($color) {
   @if (lightness($color) > 50) {
     @return black;
