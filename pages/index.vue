@@ -5,8 +5,10 @@
 
 	<div class="email">
 		<sub>Get notified when we go live. Leave your email here, we will be careful with it.</sub>
-	  <input type="email" placeholder="john@mail.com">
-	  <v-button>Get notified</v-button>
+		<form action="/" method="get">
+	  	<input type="email" name="email" placeholder="john@mail.com">
+	  	<v-button>Get notified</v-button>
+	  </form>
 	  </div>
   </div>
 </template>
@@ -17,7 +19,6 @@ import { Component, Vue } from "nuxt-property-decorator"
 @Component({
 })
 export default class Index extends Vue {
-
 }
 </script>
 
