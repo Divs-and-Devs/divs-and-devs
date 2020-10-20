@@ -6,13 +6,13 @@ $accent-text-color: white;
 $accent-dark: #553ea1;
 $accent-light:#9474ff;
 
-$accent2: #0000ff;
-$accent2-dark: #000080;
-$accent2-light: #8080ff;
+$accent2: #FF8A00;
+$accent2-dark: #9e5706;
+$accent2-light: #fba746;
 
 $border-radius: 1rem;
 
-$header-font: 'Raleway';
+$header-font: 'Montserrat';
 $font: 'Lato';
 
 * {
@@ -43,6 +43,8 @@ body {
   }
 }
 
+
+//// RESPONSIVE 
 @mixin mobile {
   @media screen and (max-width: 767px) {
     @content;
@@ -60,3 +62,49 @@ body {
     @content;
   }
 }
+
+
+//// VARIABLES
+@mixin flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+//// KEYFRAMES
+@keyframes line-animation {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes block-fade {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

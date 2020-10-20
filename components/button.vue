@@ -9,7 +9,7 @@ button {
 	font-size: 1rem;
 
 	border: none;
-	background-color: $accent;
+	background-color: $accent2;
 	color: $accent-text-color;
 	border-radius: $border-radius;
 	
@@ -19,11 +19,11 @@ button {
 
 	&:focus,
 	&:hover {
-		background-color: $accent-dark;
+		background-color: $accent2-dark;
 	}
 
 	&:active {
-		background-color: $accent-light;
+		background-color: $accent2-light;
 	}
 }
 </style>
