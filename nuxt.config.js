@@ -29,7 +29,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    'plugins/global-components.js'
+    'plugins/global-components.js',
+    'plugins/filters.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -43,11 +44,23 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/strapi',
+    '@nuxtjs/markdownit',
+    "@nuxt/components"
   ],
+  components: true,
+  strapi: {
+    url: "https://admin.divsanddevs.nl/"
+  },
+  markdownit: {
+  preset: 'default',
+  linkify: true,
+  breaks: true,
+  injected: true,
+  },
   styleResources: {
     scss: ['./assets/*.scss']
   },

@@ -119,17 +119,24 @@
 			<input type="email" name="email" placeholder="john@mail.com" />
 			<v-button>Get notified</v-button>
 		</form>
+<!-- 
+    <div v-for="project in projects">
+      <h1>{{project.title}}</h1>
+      <markdown :text="project.body" />
     </div>
+    </div> -->
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-
-@Component({})
-export default class Index extends Vue {}
+<script>
+export default {
+  async asyncData({ $strapi}) {
+    return {
+      projects: await $strapi.find("blogposts")
+    }
+  }
+}
 </script>
-
 
 <style lang="scss" scoped>
 .page {
@@ -235,7 +242,7 @@ export default class Index extends Vue {}
 		height: 50%;
 		@include flex-center;
 		animation: fade-in 500ms ease-in-out 4.5s forwards;
-	
+
 	sub {
 		color: #fff;
 		margin: 10px;
