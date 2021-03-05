@@ -119,12 +119,12 @@
 			<input type="email" name="email" placeholder="john@mail.com" />
 			<v-button>Get notified</v-button>
 		</form>
-<!-- 
+<!--
     <div v-for="project in projects">
       <h1>{{project.title}}</h1>
       <markdown :text="project.body" />
-    </div>
     </div> -->
+    </div>
   </div>
 </template>
 
