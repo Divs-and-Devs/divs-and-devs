@@ -8,7 +8,7 @@
 export default {
     props: {
         size: {
-            type: Number,
+            type: [Number, String],
             required: false,
             default: 12
         }
@@ -63,7 +63,7 @@ export default {
             display: none;
         }	
     }
-    @media screen and (min-width: 768px) and (max-width: 1023px) /* Desktop */ {
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
         .col-1t:nth-child(12n+1),
         .col-2t:nth-child(6n+1),
         .col-3t:nth-child(4n+1),
@@ -100,7 +100,7 @@ export default {
             clear: left;
         }
     }
-    @media screen and (max-width: 413px) {
+    @media screen and (max-width: 413px)   {
         .col-1s { width: calc((100%/(12/1)) - var(--gutter)); }
         .col-2s { width: calc((100%/(12/2)) - var(--gutter)); }
         .col-3s { width: calc((100%/(12/3)) - var(--gutter)); }

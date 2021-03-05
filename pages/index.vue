@@ -130,11 +130,11 @@
 
 <script>
 export default {
-  async asyncData({ $strapi}) {
-    return {
-      projects: await $strapi.find("blogposts")
-    }
-  }
+  // async asyncData({ $strapi}) {
+  //   return {
+  //     projects: await $strapi.find("blogposts")
+  //   }
+  // }
 }
 </script>
 
@@ -222,7 +222,7 @@ export default {
   .heading {
 	  	opacity: 0;
 		height: 50%;
-		@include flex-center;
+		@include flex;
 		animation: fade-in 500ms ease-in-out 3.75s forwards;
 
     h1 {
@@ -240,7 +240,7 @@ export default {
   .email {
 	  	opacity: 0;
 		height: 50%;
-		@include flex-center;
+		@include flex;
 		animation: fade-in 500ms ease-in-out 4.5s forwards;
 
 	sub {

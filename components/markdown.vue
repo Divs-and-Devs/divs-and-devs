@@ -11,7 +11,7 @@ export default {
         }
     },
     computed: {
-        content() {
+        content() { 
             return this.$md.render(this.text);
         }
     }

@@ -1,36 +1,58 @@
 $background-color: #fff;
-$background-dark: #293133;
 
-$accent: #7e5ded;
+$text-color: #18191F;
 $accent-text-color: white;
-$accent-dark: #553ea1;
-$accent-light:#9474ff;
 
-$accent2: #FF8A00;
-$accent2-dark: #9e5706;
-$accent2-light: #fba746;
+$accent: #8877FF;
+$accent-light:#C7BFFF;
+
+$accent2: #F18817;
+$accent2-light: #F8E6D3;
 
 $border-radius: 1rem;
 
-$header-font: 'Montserrat';
-$font: 'Lato';
+$header-font: 'Barlow';
+$font: 'Barlow';
 
 * {
   font-family: $font, sans-serif;
+  font-weight: 400;
   outline: none;
 }
 
 h1,
+h1 span,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: $header-font, sans-serif;
+  color: $text-color;
+  font-weight: 600;
+
+  &::selection {
+    color: #fff;
+    background-color: $accent2;
+  }
+}
+
+h1,
+h1 span {
+  font-weight: 700;
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3rem;
 }
 
 body {
   margin: 0;
+}
+
+section {
+  min-height: 100vh;
 }
 
 @function text-color($color) {
@@ -65,11 +87,10 @@ body {
 
 
 //// VARIABLES
-@mixin flex-center{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+@mixin flex($h-align: center, $v-align: center) {
+	display: flex;
+	justify-content: $h-align;
+	align-items: $v-align;
 }
 
 
