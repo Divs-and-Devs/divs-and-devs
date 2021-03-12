@@ -12,6 +12,8 @@
 				<row class="cta">
 					<column :size="12">
 						<h2>{{cta_text}}</h2>
+
+						<v-button type="white">Meer informatie</v-button>
 					</column>
 				</row>
 			</grid>
@@ -157,6 +159,11 @@
 		&.cta {
 			background: $accent;
 			border-radius: $border-radius;
+			padding: 2.5rem;
+
+			h2 {
+				margin-top: 0;
+			}
 
 			.col {
 				@include flex;

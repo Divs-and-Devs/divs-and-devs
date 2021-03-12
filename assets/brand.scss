@@ -14,6 +14,8 @@ $border-radius: 1rem;
 $header-font: 'Barlow';
 $font: 'Barlow';
 
+$shadow: 0 4px 4px rgba(0, 0, 0, .25);
+
 * {
   font-family: $font, sans-serif;
   font-weight: 400;
@@ -66,7 +68,7 @@ section {
 }
 
 
-//// RESPONSIVE 
+//// RESPONSIVE
 @mixin mobile {
   @media screen and (max-width: 767px) {
     @content;
@@ -127,5 +129,3 @@ section {
     opacity: 1;
   }
 }
-
-

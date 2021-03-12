@@ -1,9 +1,18 @@
 <template>
-	<button @click="$emit('click', $event)">
+	<button @click="$emit('click', $event)" :class="type">
 		<slot />
-	</button> 
+	</button>
 </template>
-
+<script>
+export default {
+	props: {
+		type: {
+			type: String,
+			default: "purple"
+		}
+	}
+}
+</script>
 <style lang="scss" scoped>
 button {
 	font-size: 1rem;
@@ -11,21 +20,27 @@ button {
 	letter-spacing: 0.25px;
 
 	border: none;
-	background-color: $accent;
-	color: $accent-text-color;
+
+	--background: #{$accent};
+	--color: #{$accent-text-color};
+
+	background-color:var(--background);
+	color: var(--color);
 	border-radius: 8px;
     padding: 1rem 3rem;
-
-	transition: background-color 100ms ease;
+	transition: transform 250ms ease, box-shadow 250ms ease;
 
 	&:focus,
 	&:hover {
-		background-color: $accent;
+		box-shadow: $shadow;
+		transform: translateY(-5px);
 		cursor: pointer;
 	}
 
-	&:active {
-		background-color: $accent;
+	&.white {
+		--background: #fff;
+		--color: #{$accent};
+
 	}
 }
 </style>
