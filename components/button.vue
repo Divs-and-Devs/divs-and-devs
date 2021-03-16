@@ -1,7 +1,7 @@
 <template>
-	<button @click="$emit('click', $event)" :class="type">
+	<component :is="!href ? 'button' : 'a'" :href="href" @click="$emit('click', $event)" :class="type">
 		<slot />
-	</button>
+	</component>
 </template>
 <script>
 export default {
@@ -9,15 +9,26 @@ export default {
 		type: {
 			type: String,
 			default: "purple"
+		},
+		href: {
+			type: String,
+			default: undefined
 		}
 	}
 }
 </script>
 <style lang="scss" scoped>
-button {
+button, a {
+	svg {
+		margin-left: 1rem;
+	}
+}
+
+button, a {
 	font-size: 1rem;
 	font-weight: 500;
-	letter-spacing: 0.25px;
+	display: inline-block;
+	text-decoration: none;
 
 	border: none;
 
@@ -42,5 +53,19 @@ button {
 		--color: #{$accent};
 
 	}
+	&.text {
+		--background: none;
+		box-shadow: none;
+
+		font-weight: 700;
+		font-size: 1.25rem;
+		color: $accent;
+		margin: 1rem 0;
+
+		&.orange {
+			color: $accent2;
+		}
+	}
 }
+
 </style>
