@@ -4,6 +4,7 @@
 		<section id="hero">
 			<h1 ref="title"></h1>
 			<v-button>Start met vernieuwen</v-button>
+			<img src="~/assets/phone.png" alt="phone">
 		</section>
 
 		<!-- CALL TO ACTION -->
@@ -18,6 +19,8 @@
 				</row>
 			</grid>
 		</section>
+
+		<!-- CONTACT -->
 		<section class="contact">
 			<form
 				v-if="!sentContact"
@@ -138,8 +141,16 @@
 			max-height: 100vh;
 			flex-direction: column;
 			position: relative;
+			padding-top: 10%;
+			box-sizing: border-box;
 
-			@include flex;
+			@include flex(flex-start);
+
+			img {
+				position: absolute;
+				bottom: -22.5%;
+				z-index: 99;
+			}
 
 			&:after {
 				content: '';
@@ -159,7 +170,7 @@
 		&.cta {
 			background: $accent;
 			border-radius: $border-radius;
-			padding: 2.5rem;
+			padding: 2.5rem 0;
 
 			h2 {
 				margin-top: 0;
