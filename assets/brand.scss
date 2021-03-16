@@ -30,7 +30,6 @@ h4,
 h5,
 h6 {
   font-family: $header-font, sans-serif;
-  color: $text-color;
   font-weight: 600;
 
   &::selection {
@@ -52,11 +51,6 @@ h2 {
 body {
   margin: 0;
 }
-
-section {
-  min-height: 100vh;
-}
-
 @function text-color($color) {
   @if (lightness($color) > 50) {
     @return black;
