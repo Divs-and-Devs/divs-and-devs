@@ -35,7 +35,7 @@
 				/>
 				<v-button
 					href="#contact"
-					type="orange"
+					type="text orange"
 				>Get started
 					<icon name="arrow" />
 				</v-button>
