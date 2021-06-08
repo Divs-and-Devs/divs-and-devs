@@ -1,0 +1,52 @@
+* {
+    font-family: $font, sans-serif;
+    font-weight: 400;
+    outline: none;
+  }
+  
+  h1,
+  h1 span,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $header-font, sans-serif;
+    font-weight: 600;
+  
+    &::selection {
+      color: #fff;
+      background-color: $accent2;
+    }
+  }
+  
+  h1,
+  h1 span {
+    font-weight: 700;
+    font-size: 4.5rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+  }
+  
+  body {
+    margin: 0;
+  }
+  @function text-color($color) {
+    @if (lightness($color) > 50) {
+      @return black;
+    }
+  
+    @else {
+      @return white;
+    }
+  }
+
+
+  .col.middle {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }

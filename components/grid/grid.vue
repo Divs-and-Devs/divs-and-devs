@@ -19,6 +19,6 @@ export default {
   padding: 0;
   margin: auto;
   --gutter: 34px;
-  max-width: 1110px;
+  max-width: 1400px;
 }
 </style>

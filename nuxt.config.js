@@ -26,7 +26,7 @@ export default {
   ** Global CSS
   */
   css: [
-    "~/assets/brand.scss"
+    "~/assets/main.scss"
   ],
   /*
   ** Plugins to load before mounting the App
@@ -50,9 +50,8 @@ export default {
     '@nuxtjs/style-resources',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
-    '@nuxtjs/strapi',
-    '@nuxtjs/markdownit',
-    "@nuxt/components"
+    "@nuxt/components",
+    "@nuxt/content"
   ],
   components: true,
   strapi: {
@@ -65,7 +64,7 @@ export default {
   injected: true,
   },
   styleResources: {
-    scss: ['./assets/*.scss']
+    scss: ['./assets/brand.scss']
   },
   /*
   ** Axios module configuration
