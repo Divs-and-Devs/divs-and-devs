@@ -37,7 +37,7 @@ button, a {
 
 	background-color:var(--background);
 	color: var(--color);
-	border-radius: 8px;
+	border-radius: 5px;
     padding: 1rem 3rem;
 	transition: transform 250ms ease, box-shadow 250ms ease;
 

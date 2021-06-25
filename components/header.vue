@@ -28,6 +28,14 @@
 <style lang="scss" scoped>
 #header {
     height: 65px;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    box-shadow: 0px 1px 0px #E5E9F2;
+    background: #fff;
+    z-index: 10;
 
     #logo img {
         height: 65px;
@@ -35,6 +43,12 @@
 
     .col {
         @include flex;
+
+        a {
+          color: #000;
+          text-decoration-line: none;
+          margin: 0 10px;
+        }
     }
 }
 </style>

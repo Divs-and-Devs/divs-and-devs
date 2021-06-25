@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 .wrapper {
-  padding: 0;
+  padding: 0 90px;
   margin: auto;
   --gutter: 34px;
   max-width: 1400px;
