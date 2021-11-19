@@ -1,5 +1,9 @@
 
 export default {
+  target: "static",
+  generate: {
+    devtools: true
+  },
   /*
   ** Headers of the page
   */
@@ -12,7 +16,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Quicksand&display=swap' }
     ],
     script: [
       { src: 'https://unpkg.com/typewriter-effect@latest/dist/core.js' }
@@ -26,7 +30,7 @@ export default {
   ** Global CSS
   */
   css: [
-    "~/assets/main.scss"
+    "~/assets/scss/main.scss"
   ],
   /*
   ** Plugins to load before mounting the App
@@ -38,9 +42,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-    '@nuxt/typescript-build',
-  ],
+  buildModules: [],
   /*
   ** Nuxt.js modules
   */
@@ -53,18 +55,16 @@ export default {
     "@nuxt/components",
     "@nuxt/content"
   ],
+
   components: true,
-  strapi: {
-    url: "https://admin.divsanddevs.nl/"
-  },
   markdownit: {
-  preset: 'default',
-  linkify: true,
-  breaks: true,
-  injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true,
   },
   styleResources: {
-    scss: ['./assets/brand.scss']
+    scss: ['./assets/scss/brand.scss']
   },
   /*
   ** Axios module configuration

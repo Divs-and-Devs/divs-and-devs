@@ -5,7 +5,7 @@
       <h1 ref="title">hallo</h1>
       <v-button href="#contact">Start met vernieuwen</v-button>
       <img
-        src="~/assets/logo.svg"
+        src="/logo.svg"
         alt="phone"
       >
     </section>
@@ -160,7 +160,7 @@
     </section>
     <footer>
       <p><img
-          src="~/assets/logo.svg"
+          src="/logo.svg"
           class="logo"
         > Divs and devs</p>
 
@@ -477,7 +477,7 @@
       right: 0;
       bottom: 0;
 
-      background: url('~assets/logo-white.svg');
+      background: url('/logo-white.svg');
       background-position: left;
       background-size: 24rem;
       background-repeat: no-repeat;

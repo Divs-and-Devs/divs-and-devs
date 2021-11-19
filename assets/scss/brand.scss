@@ -1,18 +1,18 @@
-$background-color: #fff;
-
-$text-color: #18191F;
+$background: #26252C;
+$text-color: #ffffffd8;
 $accent-text-color: white;
 
-$accent: #8877FF;
+$accent: #4822CA;
 $accent-light:#C7BFFF;
 
-$accent2: #F18817;
+$accent2: #f58500;
 $accent2-light: #F8E6D3;
 
+$gradient: linear-gradient(295.96deg, #f58500e6 0%, #4822CA 100%), url('/whitenoise.png');
 $border-radius: 1rem;
 
-$header-font: 'Barlow';
-$font: 'Barlow';
+$header-font: 'Quicksand';
+$font: 'Quicksand';
 
 $shadow: 0 4px 4px rgba(0, 0, 0, .25);
 

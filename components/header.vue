@@ -11,7 +11,7 @@
         </column>
         <column :size="4" id="logo">
           <img
-            src="~/assets/logo.svg"
+            src="/logo.svg"
             alt="phone"
           >
         </column>

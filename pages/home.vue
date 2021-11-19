@@ -10,7 +10,7 @@
             :size="6"
             class="middle"
           >
-            <h1 ref="title">Is jou website toe aan vernieuwing ?</h1>
+            <h1 id="title">Is jou website toe aan vernieuwing ?</h1>
             <v-button href="#contact">Start met vernieuwen</v-button>
           </column>
           <column :size="6"></column>
@@ -61,8 +61,9 @@
   export default {
     methods: {
       startTypewriter() {
-        const content = this.$refs.title.textContent
-        const typewriter = new Typewriter(this.$refs.title, {
+        const title = document.getElementById('title');
+        const content = title.textContent
+        const typewriter = new Typewriter(title, {
           autoStart: true,
           loop: false,
           delay: 100
