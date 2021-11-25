@@ -64,6 +64,13 @@ export default {
       }
     ]
   },
+
+  sitemap: {
+    exclude: [
+      '/home',
+      '/homepage'
+    ]
+  },
   /*
   ** Customize the progress-bar color
   */
@@ -95,7 +102,8 @@ export default {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     "@nuxt/components",
-    "@nuxt/content"
+    "@nuxt/content",
+    '@nuxtjs/sitemap'
   ],
 
   components: true,
