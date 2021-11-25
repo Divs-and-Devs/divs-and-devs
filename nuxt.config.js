@@ -66,6 +66,7 @@ export default {
   },
 
   sitemap: {
+    hostname: "https://divsanddevs.nl",
     exclude: [
       '/home',
       '/homepage'
